@@ -48,7 +48,7 @@ verde (orgánico) y gris (peligroso/general). Esto refuerza visualmente el apren
 1. Descarga o clona la carpeta `proyecto-reciclaje`.
 2. Abre `index.html` en cualquier navegador. No requiere servidor ni instalación.
 
-## 🌐 Publicación en GitHub Pages
+##  Publicación en GitHub Pages
 
 ```bash
 git init
@@ -61,9 +61,3 @@ git push -u origin main
 
 Luego, en GitHub: **Settings → Pages → Branch: main → carpeta / (root)** y guardar.
 El sitio quedará publicado en `https://tu-usuario.github.io/proyecto-reciclaje/`.
-
-## 📌 Próximos pasos sugeridos
-
-- Agregar más materiales a la lista del buscador
-- Conectar el formulario de contacto a un servicio real (ej. Formspree)
-- Añadir imágenes propias de puntos de reciclaje locales

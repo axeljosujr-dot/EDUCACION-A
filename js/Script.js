@@ -112,7 +112,6 @@ quizForm.addEventListener("submit", (e) => {
   quizResultado.textContent = `Obtuviste ${correctas} de ${preguntas.length} respuestas correctas.`;
 });
 
-// =========================================================
 // FORMULARIO DE CONTACTO (demo, sin backend)
 // =========================================================
 const contactoForm = document.getElementById("contacto-form");
