@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educación Ambiental y Reciclaje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAV ===== -->
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark">♻</span>
+    <span class="brand-name">ReCicla</span>
+  </div>
+  <nav class="bin-nav">
+    <a href="#inicio" class="bin-tag bin-general">Inicio</a>
+    <a href="#residuos" class="bin-tag bin-azul">Tipos de residuos</a>
+    <a href="#clasificacion" class="bin-tag bin-amarillo">Clasificación</a>
+    <a href="#impacto" class="bin-tag bin-gris">Impacto</a>
+    <a href="#consejos" class="bin-tag bin-verde">Las 3R</a>
+    <a href="#quiz" class="bin-tag bin-azul">Quiz</a>
+    <a href="#contacto" class="bin-tag bin-amarillo">Contacto</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Proyecto escolar · Educación ambiental</p>
+    <h1>Cada residuo tiene <span class="highlight">un contenedor</span>.<br>Aprende a encontrarlo.</h1>
+    <p class="hero-sub">Un sitio para entender qué desechamos, cómo clasificarlo y por qué separar la basura le da una segunda vida a los materiales.</p>
+    <a href="#residuos" class="cta">Explorar los residuos ↓</a>
+  </div>
+  <div class="hero-stat">
+    <span class="stat-number">4</span>
+    <span class="stat-label">contenedores básicos<br>para empezar a reciclar hoy</span>
+  </div>
+</section>
+
+<!-- ===== TIPOS DE RESIDUOS ===== -->
+<section id="residuos" class="section bin-border-azul">
+  <span class="section-tag bin-azul">Papel y cartón</span>
+  <h2>Tipos de residuos</h2>
+  <p class="section-intro">Todo lo que desechamos pertenece a una de estas familias. Reconocerlas es el primer paso para separarlas bien.</p>
+
+  <div class="card-grid" id="residuo-grid">
+    <article class="card" data-tipo="papel">
+      <span class="card-bin bin-azul">Papel</span>
+      <h3>Papel y cartón</h3>
+      <p>Periódicos, cajas, cuadernos. Se degrada en 2–5 meses si no está laminado.</p>
+    </article>
+    <article class="card" data-tipo="plastico">
+      <span class="card-bin bin-amarillo">Plástico</span>
+      <h3>Envases plásticos</h3>
+      <p>Botellas, bolsas, empaques. Puede tardar hasta 500 años en degradarse.</p>
+    </article>
+    <article class="card" data-tipo="organico">
+      <span class="card-bin bin-verde">Orgánico</span>
+      <h3>Residuos orgánicos</h3>
+      <p>Restos de comida y jardín. Ideal para compostaje, se degrada en semanas.</p>
+    </article>
+    <article class="card" data-tipo="vidrio">
+      <span class="card-bin bin-azul">Vidrio</span>
+      <h3>Vidrio</h3>
+      <p>Botellas y frascos. Es 100% reciclable un número infinito de veces.</p>
+    </article>
+    <article class="card" data-tipo="metal">
+      <span class="card-bin bin-amarillo">Metal</span>
+      <h3>Metales</h3>
+      <p>Latas de aluminio y hojalata. Reciclar aluminio ahorra hasta 95% de energía.</p>
+    </article>
+    <article class="card" data-tipo="peligroso">
+      <span class="card-bin bin-gris">Peligroso</span>
+      <h3>Residuos peligrosos</h3>
+      <p>Pilas, electrónicos, químicos. Requieren puntos de recolección especiales.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== CLASIFICACIÓN / BUSCADOR-FILTRO ===== -->
+<section id="clasificacion" class="section bin-border-amarillo">
+  <span class="section-tag bin-amarillo">Herramienta</span>
+  <h2>¿En qué contenedor va?</h2>
+  <p class="section-intro">Escribe un material o filtra por categoría para saber dónde depositarlo.</p>
+
+  <div class="filter-tool">
+    <input type="text" id="buscador" placeholder="Ej: botella, cáscara de plátano, pila…">
+    <div class="filter-chips">
+      <button class="chip bin-azul active" data-filtro="todos">Todos</button>
+      <button class="chip bin-azul" data-filtro="papel">Papel</button>
+      <button class="chip bin-amarillo" data-filtro="plastico">Plástico</button>
+      <button class="chip bin-verde" data-filtro="organico">Orgánico</button>
+      <button class="chip bin-azul" data-filtro="vidrio">Vidrio</button>
+      <button class="chip bin-amarillo" data-filtro="metal">Metal</button>
+      <button class="chip bin-gris" data-filtro="peligroso">Peligroso</button>
+    </div>
+  </div>
+
+  <ul id="lista-materiales" class="material-list"></ul>
+  <p id="sin-resultados" class="empty-state" hidden>No encontramos ese material. Intenta con otra palabra.</p>
+</section>
+
+<!-- ===== IMPACTO ===== -->
+<section id="impacto" class="section bin-border-gris">
+  <span class="section-tag bin-gris">Datos</span>
+  <h2>Impacto ambiental</h2>
+  <p class="section-intro">Separar la basura no es solo orden: cambia lo que le pasa al planeta.</p>
+
+  <div class="impacto-grid">
+    <div class="impacto-item">
+      <span class="impacto-num">500</span>
+      <p>años puede tardar una bolsa plástica en degradarse en un vertedero.</p>
+    </div>
+    <div class="impacto-item">
+      <span class="impacto-num">95%</span>
+      <p>de energía se ahorra al reciclar aluminio en vez de producirlo desde cero.</p>
+    </div>
+    <div class="impacto-item">
+      <span class="impacto-num">17</span>
+      <p>árboles se salvan por cada tonelada de papel reciclado.</p>
+    </div>
+    <div class="impacto-item">
+      <span class="impacto-num">∞</span>
+      <p>veces se puede reciclar el vidrio sin perder calidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LAS 3R ===== -->
+<section id="consejos" class="section bin-border-verde">
+  <span class="section-tag bin-verde">Hábitos</span>
+  <h2>Reduce, reutiliza, recicla</h2>
+  <p class="section-intro">En ese orden: lo que no consumes no necesita reciclarse.</p>
+
+  <div class="tres-r">
+    <div class="r-item">
+      <h3>Reduce</h3>
+      <p>Compra solo lo necesario y evita productos de un solo uso.</p>
+    </div>
+    <div class="r-item">
+      <h3>Reutiliza</h3>
+      <p>Dale una segunda función a frascos, ropa y envases antes de botarlos.</p>
+    </div>
+    <div class="r-item">
+      <h3>Recicla</h3>
+      <p>Separa correctamente lo que ya no puedes reducir ni reutilizar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUIZ ===== -->
+<section id="quiz" class="section bin-border-azul">
+  <span class="section-tag bin-azul">Autoevaluación</span>
+  <h2>Pon a prueba lo aprendido</h2>
+  <p class="section-intro">Responde las preguntas y descubre tu puntaje al final.</p>
+
+  <form id="quiz-form" class="quiz">
+    <fieldset class="quiz-question" data-correcta="b">
+      <legend>1. ¿En qué contenedor va una botella de vidrio?</legend>
+      <label><input type="radio" name="p1" value="a"> Orgánico</label>
+      <label><input type="radio" name="p1" value="b"> Vidrio</label>
+      <label><input type="radio" name="p1" value="c"> Peligroso</label>
+    </fieldset>
+
+    <fieldset class="quiz-question" data-correcta="a">
+      <legend>2. ¿Cuál de las 3R debería aplicarse primero?</legend>
+      <label><input type="radio" name="p2" value="a"> Reducir</label>
+      <label><input type="radio" name="p2" value="b"> Reciclar</label>
+      <label><input type="radio" name="p2" value="c"> Reutilizar</label>
+    </fieldset>
+
+    <fieldset class="quiz-question" data-correcta="c">
+      <legend>3. ¿Dónde debe ir una pila usada?</legend>
+      <label><input type="radio" name="p3" value="a"> Orgánico</label>
+      <label><input type="radio" name="p3" value="b"> Plástico</label>
+      <label><input type="radio" name="p3" value="c"> Punto de recolección de residuos peligrosos</label>
+    </fieldset>
+
+    <fieldset class="quiz-question" data-correcta="b">
+      <legend>4. ¿Cuánto puede tardar un plástico en degradarse?</legend>
+      <label><input type="radio" name="p4" value="a"> Unos días</label>
+      <label><input type="radio" name="p4" value="b"> Hasta 500 años</label>
+      <label><input type="radio" name="p4" value="c"> Nunca cambia de estado</label>
+    </fieldset>
+
+    <button type="submit" class="cta">Ver mi puntaje</button>
+    <p id="quiz-resultado" class="quiz-resultado" hidden></p>
+  </form>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="section bin-border-amarillo">
+  <span class="section-tag bin-amarillo">Contacto</span>
+  <h2>Escríbenos</h2>
+  <p class="section-intro">¿Preguntas, sugerencias o quieres reportar un punto de reciclaje? Cuéntanos.</p>
+
+  <form id="contacto-form" class="contact-form">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" rows="4" required></textarea>
+
+    <button type="submit" class="cta">Enviar mensaje</button>
+    <p id="contacto-confirmacion" class="quiz-resultado" hidden>¡Gracias! Tu mensaje fue registrado (demo, sin envío real).</p>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>Proyecto escolar — Educación Ambiental y Reciclaje · Hecho con HTML, CSS y JavaScript.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
