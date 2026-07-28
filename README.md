@@ -7,7 +7,7 @@ Sitio web educativo sobre reciclaje y cuidado del medio ambiente, creado como pr
 Enseñar a clasificar residuos, entender el impacto ambiental de no reciclar y promover
 hábitos sostenibles a través de una experiencia interactiva.
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 proyecto-reciclaje/
