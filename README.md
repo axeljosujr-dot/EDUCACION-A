@@ -2,7 +2,7 @@
 
 Sitio web educativo sobre reciclaje y cuidado del medio ambiente, creado como proyecto escolar.
 
-## 🎯 Objetivo
+##  Objetivo
 
 Enseñar a clasificar residuos, entender el impacto ambiental de no reciclar y promover
 hábitos sostenibles a través de una experiencia interactiva.
@@ -19,7 +19,7 @@ proyecto-reciclaje/
 └── README.md            # Este archivo
 ```
 
-## ✅ Secciones incluidas
+##  Secciones incluidas
 
 | Sección | Descripción |
 |---|---|
@@ -37,13 +37,13 @@ proyecto-reciclaje/
 - **CSS3** — diseño responsivo, sin frameworks
 - **JavaScript (vanilla)** — buscador/filtro dinámico, lógica del quiz y validación de formulario
 
-## 🎨 Sistema de diseño
+##  Sistema de diseño
 
 El color de cada elemento (etiquetas, tarjetas, chips del filtro) corresponde al contenedor
 de reciclaje real al que pertenece el material: azul (papel/vidrio), amarillo (plástico/metal),
 verde (orgánico) y gris (peligroso/general). Esto refuerza visualmente el aprendizaje.
 
-## 🚀 Cómo verlo localmente
+##  Cómo verlo localmente
 
 1. Descarga o clona la carpeta `proyecto-reciclaje`.
 2. Abre `index.html` en cualquier navegador. No requiere servidor ni instalación.
